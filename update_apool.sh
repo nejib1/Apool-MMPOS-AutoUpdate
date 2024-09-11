@@ -23,8 +23,7 @@ if [ "$LAST_MODIFIED_DATE" != "$CURRENT_DATE" ]; then
             curl -L -o "apoolminer-$VERSION.tar.gz" "$FILE_URL" && \
             tar --strip-components=1 -xzf "apoolminer-$VERSION.tar.gz" -C "$TARGET_DIR" && \
             rm "apoolminer-$VERSION.tar.gz" && \
-            echo "Files extracted, restarting rig..." && \
-            agent-restart
+            echo "Files extracted..."
         else
             echo "File $FILE_URL does not exist."
         fi
