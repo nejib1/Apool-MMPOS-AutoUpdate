@@ -54,7 +54,7 @@ crontab -e
 Add the following cron job:
 
 ```bash
-*/30 12-23 * * 3 cd /opt/mmp/miners/$(ls -td /opt/mmp/miners/custom-* | head -1) && ./update_apool.sh
+*/30 12-23 * * 3 cd $(ls -td /opt/mmp/miners/custom-* | head -1) && ./update_apool.sh
 ```
 
 - `*/30`: Runs every 30 minutes.
