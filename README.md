@@ -74,11 +74,11 @@ The cron job first changes the directory to the most recent `/opt/mmp/miners/cus
 
 3. **Download and extract**: If a new version is found, the script downloads the appropriate `.tar.gz` file from GitHub, extracts its contents directly into the current directory (`/opt/mmp/miners/custom-XXXXX`), and replaces the existing files.
 
+### License
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+
 ### Author
 
 [Nejib BEN AHMED](https://github.com/nejib1)
 
 
-
-### License
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
