@@ -25,22 +25,22 @@ This project contains a script that automatically checks for the latest version 
    ```bash
    git clone https://github.com/nejib1/Apool-MMPOS-AutoUpdate.git
    cd Apool-MMPOS-AutoUpdate
+   ```
 
+2. Move to the most recent `custom-XXXXX` directory for **apool** in **MMPOS**. This is necessary because the script operates within this directory:
 
-Move to the most recent custom-XXXXX directory for apool in MMPOS. This is necessary because the script operates within this directory:
+   ```bash
+   cd /opt/mmp/miners/$(ls -td /opt/mmp/miners/custom-* | head -1)
+   ```
 
-```bash
-cd /opt/mmp/miners/$(ls -td /opt/mmp/miners/custom-* | head -1)
-```
+3. Copy the script to this directory and make it executable:
 
-Copy the script to this directory and make it executable:
+   ```bash
+   cp /path/to/update_apool.sh .
+   chmod +x update_apool.sh
+   ```
 
-```bash
-cp /path/to/update_apool.sh .
-chmod +x update_apool.sh
-```
-
-Ensure the script runs with the necessary permissions. You may need `sudo` depending on your system setup.
+4. Ensure the script runs with the necessary permissions.
 
 ### Cron Setup
 To automatically run the script every Wednesday from noon GMT every 30 minutes until the first successful download, follow these steps:
