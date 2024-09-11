@@ -1,4 +1,4 @@
-# MMPOS Apool Miner Auto-Update Script
+# (Qubic Mining) MMPOS Apool Miner Auto-Update Script
 
 This project contains a script that automatically checks for the latest version of the **apool** miner from GitHub and updates the local miner on **MMPOS** if a new version is available. The script is designed to be scheduled via cron and must be executed from the most recent `/opt/mmp/miners/custom-XXXXX` directory, which corresponds to **apool**.
 
