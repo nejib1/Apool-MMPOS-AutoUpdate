@@ -7,19 +7,22 @@ This project contains a script that automatically checks for the latest version 
 - Automatically fetches the latest **apool** miner version from GitHub.
 - Skips GitHub checks if the local version was already updated today.
 - Downloads the latest version, extracts it, and replaces existing files.
-- Restarts the **MMPOS** rig (`agent-restart`) after a successful update.
 - Can be scheduled to run via cron every Wednesday from noon GMT, every 30 minutes until the first successful download.
 
 ## Usage
 
 ### Requirements
 
-- **MMPOS**: The script uses `agent-restart` to restart the rig.
 - **cron**: To schedule the script for automatic execution.
 - **curl**: For fetching content from GitHub.
 - **tar**: For extracting the miner archive.
 
 ### Script Setup
+
+#### Important Note
+
+The script must be run as **root** because it requires permission to modify system directories. You can run the script with `sudo`:
+
 
 1. Clone the repository or download the script:
    ```bash
@@ -70,16 +73,6 @@ The cron job first changes the directory to the most recent `/opt/mmp/miners/cus
 
 3. **Download and extract**: If a new version is found, the script downloads the appropriate `.tar.gz` file from GitHub, extracts its contents directly into the current directory (`/opt/mmp/miners/custom-XXXXX`), and replaces the existing files.
 
-4. **Restart the rig**: After extracting the files, the script runs `agent-restart` to restart the **MMPOS** rig with the new version of **apool**.
-
-### Example Output
-
-Here is an example of what you might see when the script runs:
-
-```bash
-Downloading https://github.com/ddobreff/mmpos/releases/download/v2.1.0/apoolminer-v2.1.0.tar.gz...
-Files extracted, archive removed, restarting rig...
-```
 
 ### License
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
