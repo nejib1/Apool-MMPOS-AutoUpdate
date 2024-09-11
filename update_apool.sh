@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# Script for automatically checking and updating the apool miner in MMPOS.
+# Author: Nejib BEN AHMED
+
 OUTPUT_FILE="last_version.txt"
 TARGET_DIR="."
 CURRENT_DATE=$(date +%Y-%m-%d)  # Get today's date in YYYY-MM-DD format
