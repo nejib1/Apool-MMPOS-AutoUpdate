@@ -27,19 +27,19 @@ This project contains a script that automatically checks for the latest version 
    cd Apool-MMPOS-AutoUpdate
    ```
 
-2. Move to the most recent `custom-XXXXX` directory for **apool** in **MMPOS**. This is necessary because the script operates within this directory:
+2. Copy the script to this directory and make it executable:
+
+   ```bash
+   cp update_apool.sh $(ls -td /opt/mmp/miners/custom-* | head -1)
+   chmod +x update_apool.sh   
+   ```
+
+3. Move to the most recent `custom-XXXXX` directory for **apool** in **MMPOS**. This is necessary because the script operates within this directory:
 
    ```bash
     cd $(ls -td /opt/mmp/miners/custom-* | head -1)
    ```
-
-3. Copy the script to this directory and make it executable:
-
-   ```bash
-   cp /path/to/update_apool.sh .
-   chmod +x update_apool.sh
-   ```
-
+   
 4. Ensure the script runs with the necessary permissions.
 
 ### Cron Setup
